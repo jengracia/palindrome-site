@@ -2,13 +2,13 @@ let Phrase = require("jengracia-palindrome");
 
 function palindromeTester() {
   let string = prompt("Please enter a string for palindrome testing:");
-
   let phrase = new Phrase(string);
+  let palindromeResult = document.querySelector("#palindromeResult");
 
   if (phrase.palindrome()) {
-    alert(`"${phrase.content}" is a palindrome!`);
+    palindromeResult.innerHTML = `"${phrase.content}" is a palindrome!`;
   } else {
-    alert(`"${phrase.content}" is not a palindrome!`);
+    palindromeResult.innerHTML = `"${phrase.content}" is not a palindrome!`;
   }
 }
 
